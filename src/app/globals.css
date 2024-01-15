@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+}
+
+body{
+    color: white;
+    background-color: rgb(32,32,35);
+}
+
+@layer components {
+    .site-navbar-container{
+        @apply max-w-3xl mx-auto px-4
+    }
+    .site-main-container{
+        @apply max-w-xl mx-auto px-4
+    }
+}
