@@ -1,4 +1,5 @@
 import Link from "next/link";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 
 const BlogPage = () => {
@@ -59,7 +60,6 @@ const BlogPage = () => {
                        </div>
                         <p>
                             <span className="flex flex-row gap-1">
-                                <i></i>
                                 <small className="text-text-xsm font-extralight text-gray-300 antialiased">60 dakika okuma süresi</small>
                             </span>
                         </p>
