@@ -25,7 +25,10 @@ module.exports = {
     },
     width:{
       '100px': '100px',
-    }
+    },
+    fontSize:{
+      'text-xsm': '0.6rem',
+    },
   },
   plugins: [],
 }

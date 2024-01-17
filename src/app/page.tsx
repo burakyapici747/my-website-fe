@@ -2,6 +2,7 @@ import {M_PLUS_Rounded_1c, Open_Sans} from "@next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 
+
 const mPlusRounded = M_PLUS_Rounded_1c({
     subsets: ['vietnamese'],
     weight: ['400'],
