@@ -17,4 +17,10 @@ body{
     .site-main-container{
         @apply max-w-xl mx-auto px-4
     }
+    .site-margin-top{
+        @apply mt-16
+    }
+    .site-margin-bottom{
+         @apply mb-16
+    }
 }
