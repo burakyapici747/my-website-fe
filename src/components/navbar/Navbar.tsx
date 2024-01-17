@@ -14,7 +14,7 @@ const Navbar = () => {
             <div className="w-full site-navbar-container flex flex-wrap p-2">
                 <div className="flex items-center mr-5">
                     <h1 className="text-md">
-                        <Link href="">
+                        <Link href="/">
                             <span className="flex gap-1 group font-bold text-md21 items-center">
                                 <svg className="w-4 text-white group-hover:rotate-[20deg]" fill="white" width="14px" height="14px" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
                                     <title/>

@@ -4,20 +4,12 @@ const Links = () => {
 
     const links = [
         {
-            title: "Home",
-            path: "/",
-        },
-        {
-            title: "About",
-            path: "/about",
+            title: "Articles",
+            path: "/articles",
         },
         {
             title: "Projects",
             path: "/projects",
-        },
-        {
-            title: "Blog",
-            path: "/blog",
         },
         {
             title: "Contact",
