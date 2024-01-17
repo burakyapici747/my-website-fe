@@ -22,12 +22,15 @@ module.exports = {
     },
     height:{
       '100px': '100px',
+    ...require('tailwindcss/defaultTheme').height,
     },
     width:{
       '100px': '100px',
+      ...require('tailwindcss/defaultTheme').width,
     },
     fontSize:{
-      'text-xsm': '0.6rem',
+      'xxs': '10px',
+      ...require('tailwindcss/defaultTheme').fontSize,
     },
   },
   plugins: [],
