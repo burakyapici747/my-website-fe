@@ -12,10 +12,10 @@ body{
 
 @layer components {
     .site-navbar-container{
-        @apply max-w-3xl mx-auto px-4
+        @apply max-w-3xl mx-auto
     }
     .site-main-container{
-        @apply max-w-xl mx-auto px-4
+        @apply max-w-xl mx-auto
     }
     .site-margin-top{
         @apply mt-16

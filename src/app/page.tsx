@@ -17,9 +17,9 @@ function Page() {
     return (
         <>
             <div className="welcome-message w-full bg-white/[.08] site-margin-bottom">
-                <div className="site-main-container p-6">
-                    <h1 className="text-2xl text-white">Hello there...</h1>
-                    <p className="text-md antialiased font-light mt-3 hyphens-auto leading-7 indent-5">
+                <div className="site-main-container pt-6 pb-6">
+                    <h1 className="text-2xl text-white font-bold">Hello there...</h1>
+                    <p className="text-sm antialiased font-extralight mt-3 hyphens-auto leading-5 indent-4">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
                         when an unknown printer took a galley of type and scrambled it to make a type specimen book.
