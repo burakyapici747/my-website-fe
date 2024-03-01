@@ -1,12 +1,7 @@
+'use client'
 import React from 'react';
 import Links from "./links/Links";
-import {M_PLUS_Rounded_1c} from "@next/font/google";
-import {Container, Flex, Heading, Text, Link, TextField, Button} from "@radix-ui/themes";
-
-const mPlusRounded = M_PLUS_Rounded_1c({
-   subsets: ['vietnamese'],
-   weight: ['500'],
-});
+import {Container, Flex, Heading, Text, Link, Button, Dialog, TextField} from "@radix-ui/themes";
 
 const Navbar = () => {
     return (
@@ -32,7 +27,51 @@ const Navbar = () => {
                         </Flex>
                         <Links/>
                         <Flex display="flex" direction="row" justify="end" align="center" gap="2">
-                            <Link weight="bold" color="sky" href="">Login</Link>
+                            <Dialog.Root>
+                                <Dialog.Trigger>
+                                    <Link weight="bold" color="sky">Login</Link>
+                                </Dialog.Trigger>
+
+                                <Dialog.Content style={{ maxWidth: 450 }}>
+                                    <Dialog.Title>Edit profile</Dialog.Title>
+                                    <Dialog.Description size="2" mb="4">
+                                        Make changes to your profile.
+                                    </Dialog.Description>
+
+                                    <Flex direction="column" gap="3">
+                                        <label>
+                                            <Text as="div" size="2" mb="1" weight="bold">
+                                                Name
+                                            </Text>
+                                            <TextField.Input
+                                                defaultValue="Freja Johnsen"
+                                                placeholder="Enter your full name"
+                                            />
+                                        </label>
+                                        <label>
+                                            <Text as="div" size="2" mb="1" weight="bold">
+                                                Email
+                                            </Text>
+                                            <TextField.Input
+                                                defaultValue="freja@example.com"
+                                                placeholder="Enter your email"
+                                            />
+                                        </label>
+                                    </Flex>
+
+                                    <Flex gap="3" mt="4" justify="end">
+                                        <Dialog.Close>
+                                            <Button variant="soft" color="gray">
+                                                Cancel
+                                            </Button>
+                                        </Dialog.Close>
+                                        <Dialog.Close>
+                                            <Button>Save</Button>
+                                        </Dialog.Close>
+                                    </Flex>
+                                </Dialog.Content>
+                            </Dialog.Root>
+
                             <Link weight="bold" color="sky" href="">Sign up</Link>
                         </Flex>
                     </Flex>

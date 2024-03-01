@@ -1,12 +1,6 @@
-import {M_PLUS_Rounded_1c} from "@next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 import {Container, Flex, Grid, Heading, Text} from "@radix-ui/themes";
-
-const mPlusRounded = M_PLUS_Rounded_1c({
-    subsets: ['cyrillic'],
-    weight: ['700'],
-});
 
 const ProjectsPage = () => {
     return(
