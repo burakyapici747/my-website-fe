@@ -5,22 +5,21 @@
 :root{
 }
 
+*{
+    color: black!important;
+    font-family: Georgia Serif "Serif AppleMyungjo";
+}
+
 body{
-    color: white;
-    background-color: rgb(32,32,35);
+    background-color: rgb(250, 250, 248);
+    background-image: url("/img/bg1.png");
 }
 
 @layer components {
-    .site-navbar-container{
-        @apply max-w-3xl mx-auto
-    }
-    .site-main-container{
-        @apply max-w-xl mx-auto
+    .site-margin-bottom{
+        @apply mb-10
     }
     .site-margin-top{
-        @apply mt-16
-    }
-    .site-margin-bottom{
-         @apply mb-16
+        @apply mt-10
     }
 }

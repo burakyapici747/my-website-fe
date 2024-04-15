@@ -1,115 +1,30 @@
-import {M_PLUS_Rounded_1c} from "@next/font/google";
 import Image from "next/image";
 import Link from "next/link";
-
-const mPlusRounded = M_PLUS_Rounded_1c({
-    subsets: ['cyrillic'],
-    weight: ['700'],
-});
+import {Container, Flex, Grid, Heading, Text} from "@radix-ui/themes";
 
 const ProjectsPage = () => {
     return(
         <>
-            <div className="site-main-container site-margin-bottom">
-                <h1 className={`text-2xl mb-2 ${mPlusRounded}`}>Projects</h1>
-                <div className="grid grid-cols-2 overflow-y-auto gap-8">
-                    <div className="">
-                        <div className="flex flex-col gap-1">
-                            <Image src="/img/project.webp" alt="" width="1280" height="720" className="rounded-xl"/>
-                            <Link href="" className="project-detail flex flex-col">
-                                <h6 className="project-title text-md font-bold underline underline-offset-4 cursor-pointer">Game
-                                    of life</h6>
-                                <p className="antialiased font-extralight text-sm truncate">
-                                    Selamlar millet bu benim projem ben proeje yapmayı çok severim çünkü bu beni
-                                    geliştirir
-                                </p>
-                                <div className="flex flex-row items-center gap-1">
-                                    <span
-                                        className="programming-language-color rounded-full size-2.5 bg-amber-100"></span>
-                                    <span
-                                        className="programming-language-name antialiased font-extralight text-xs">Java</span>
-                                </div>
-                            </Link>
-                        </div>
-                    </div>
-                    <div className="">
-                        <div className="flex flex-col gap-1">
-                            <Image src="/img/project.webp" alt="" width="1280" height="720" className="rounded-xl"/>
-                            <Link href="" className="project-detail flex flex-col">
-                                <h6 className="project-title text-md font-bold underline underline-offset-4 cursor-pointer">Game
-                                    of life</h6>
-                                <p className="antialiased font-extralight text-sm truncate">
-                                    Selamlar millet bu benim projem ben proeje yapmayı çok severim çünkü bu beni
-                                    geliştirir
-                                </p>
-                                <div className="flex flex-row items-center gap-1">
-                                    <span
-                                        className="programming-language-color rounded-full size-2.5 bg-amber-100"></span>
-                                    <span
-                                        className="programming-language-name antialiased font-extralight text-xs">Java</span>
-                                </div>
-                            </Link>
-                        </div>
-                    </div>
-                    <div className="">
-                        <div className="flex flex-col gap-1">
-                            <Image src="/img/project.webp" alt="" width="1280" height="720" className="rounded-xl"/>
-                            <Link href="" className="project-detail flex flex-col">
-                                <h6 className="project-title text-md font-bold underline underline-offset-4 cursor-pointer">Game
-                                    of life</h6>
-                                <p className="antialiased font-extralight text-sm truncate">
-                                    Selamlar millet bu benim projem ben proeje yapmayı çok severim çünkü bu beni
-                                    geliştirir
-                                </p>
-                                <div className="flex flex-row items-center gap-1">
-                                    <span
-                                        className="programming-language-color rounded-full size-2.5 bg-amber-100"></span>
-                                    <span
-                                        className="programming-language-name antialiased font-extralight text-xs">Java</span>
-                                </div>
-                            </Link>
-                        </div>
-                    </div>
-                    <div className="">
-                        <div className="flex flex-col gap-1">
-                            <Image src="/img/project.webp" alt="" width="1280" height="720" className="rounded-xl"/>
-                            <Link href="" className="project-detail flex flex-col">
-                                <h6 className="project-title text-md font-bold underline underline-offset-4 cursor-pointer">Game
-                                    of life</h6>
-                                <p className="antialiased font-extralight text-sm truncate">
-                                    Selamlar millet bu benim projem ben proeje yapmayı çok severim çünkü bu beni
-                                    geliştirir
-                                </p>
-                                <div className="flex flex-row items-center gap-1">
-                                    <span
-                                        className="programming-language-color rounded-full size-2.5 bg-amber-100"></span>
-                                    <span
-                                        className="programming-language-name antialiased font-extralight text-xs">Java</span>
-                                </div>
-                            </Link>
-                        </div>
-                    </div>
-                    <div className="">
-                        <div className="flex flex-col gap-1">
-                            <Image src="/img/project.webp" alt="" width="1280" height="720" className="rounded-xl"/>
-                            <Link href="" className="project-detail flex flex-col">
-                                <h6 className="project-title text-md font-bold underline underline-offset-4 cursor-pointer">Game
-                                    of life</h6>
-                                <p className="antialiased font-extralight text-sm truncate">
-                                    Selamlar millet bu benim projem ben proeje yapmayı çok severim çünkü bu beni
-                                    geliştirir
-                                </p>
-                                <div className="flex flex-row items-center gap-1">
-                                    <span
-                                        className="programming-language-color rounded-full size-2.5 bg-amber-100"></span>
-                                    <span
-                                        className="programming-language-name antialiased font-extralight text-xs">Java</span>
-                                </div>
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <Container size="2">
+                <Heading as="h1" weight="regular" size="6" mb="4">Projects</Heading>
+                <Grid display="grid" columns="2" gap="7">
+                    <Flex className="project" display="flex" direction="column" gap="2">
+                        <Image src="/img/project.webp" alt="" width="1280" height="720" className="rounded-xl"/>
+                        <Link href="" className="project-detail flex flex-col">
+                            <Heading as="h6" size="3" weight="bold" className="project-title underline underline-offset-4 cursor-pointer">Game
+                                of life</Heading>
+                            <Text className="antialiased truncate" size="2" weight="regular">
+                                Selamlar millet bu benim projem ben proeje yapmayı çok severim çünkü bu beni
+                                geliştirir
+                            </Text>
+                            <Flex display="flex" direction="row" gap="2" align="center">
+                                <Text as="span" className="programming-language-color rounded-full size-2.5 bg-amber-100"></Text>
+                                <Text as="span" className="programming-language-name antialiased font-extralight text-xs">Java</Text>
+                            </Flex>
+                        </Link>
+                    </Flex>
+                </Grid>
+            </Container>
         </>
     )
 };

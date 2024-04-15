@@ -1,10 +1,11 @@
 import './globals.css'
+import '@radix-ui/themes/styles.css';
+import {Theme, ThemePanel} from '@radix-ui/themes';
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+
 import Header from '@/components/header/Header'
 import Footer from "@/components/footer/Footer";
-
-const inter = Inter({ subsets: ['latin'] })
+import React from "react";
 
 export const metadata: Metadata = {
   title: 'BurakYAPICI-Portfolio',
@@ -18,12 +19,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body>
+      <Theme>
         <Header/>
         <main className="">
             {children}
         </main>
         <Footer/>
+      </Theme>
       </body>
     </html>
   )
