@@ -33,41 +33,26 @@ const Navbar = () => {
                                 </Dialog.Trigger>
 
                                 <Dialog.Content style={{ maxWidth: 450 }}>
-                                    <Dialog.Title>Edit profile</Dialog.Title>
-                                    <Dialog.Description size="2" mb="4">
-                                        Make changes to your profile.
-                                    </Dialog.Description>
-
+                                    <Dialog.Title size="6" align="center">Login</Dialog.Title>
                                     <Flex direction="column" gap="3">
                                         <label>
-                                            <Text as="div" size="2" mb="1" weight="bold">
-                                                Name
-                                            </Text>
-                                            <TextField.Input
-                                                defaultValue="Freja Johnsen"
-                                                placeholder="Enter your full name"
-                                            />
-                                        </label>
-                                        <label>
-                                            <Text as="div" size="2" mb="1" weight="bold">
+                                            <Text as="div" size="2" mb="3" weight="bold">
                                                 Email
                                             </Text>
                                             <TextField.Input
-                                                defaultValue="freja@example.com"
                                                 placeholder="Enter your email"
                                             />
                                         </label>
                                     </Flex>
 
-                                    <Flex gap="3" mt="4" justify="end">
+                                    <Flex gap="3" mt="4">
                                         <Dialog.Close>
-                                            <Button variant="soft" color="gray">
-                                                Cancel
-                                            </Button>
+                                            <Button size="2">Save</Button>
                                         </Dialog.Close>
-                                        <Dialog.Close>
-                                            <Button>Save</Button>
-                                        </Dialog.Close>
+                                    </Flex>
+                                    <Flex gap="3" mt="4" justify="center">
+
+                                        Hesabın yok mu?<Link>Kayıt ol</Link>
                                     </Flex>
                                 </Dialog.Content>
                             </Dialog.Root>
