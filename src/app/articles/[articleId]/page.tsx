@@ -1,36 +1,47 @@
-import {FC} from "react";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faClock} from "@fortawesome/free-solid-svg-icons";
+import { faClock } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Box, Container, Heading, Text } from "@radix-ui/themes";
+import { FC } from "react";
 
-interface pageProps{
-    params: {articleId: String}
+interface pageProps {
+  params: { articleId: String };
 }
 
-const ArticleDetailPage: FC<pageProps> = ({params}) => {
-    return(
-        <>
-            <div className="article-title w-full bg-white/[.08] site-margin-bottom pt-6 pb-6">
-                <div className="site-navbar-container flex flex-col gap-3">
-                    <h4 className="text-2xl text-white antialiased font-bold">Java Modül Sisteminin Durumu - Mark Reinhold (Ceviri)</h4>
-                    <p className="text-sm antialiased font-extralight hyphens-auto leading-5 indent-4 text-gray-200">
-                        Bu bölümde Java’da derleyici kurallarının 1. serisi olan bu videoda,
-                        java’da sınıf deklerasyonu sırasında derleyicinin bizim için arka planda yaptıklarını anlatmaya çalıştım.
-                    </p>
-                    <div className="flex flex-row gap-2">
-                        <FontAwesomeIcon className="size-3" icon={faClock}/>
-                        <span className="flex flex-row gap-1">
-                            <small className="text-xxs font-light text-gray-300 antialiased">15 dakika tahmini okuma süresi</small>
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <article className="article-content site-margin-bottom">
-                <div className="">
-
-                </div>
-            </article>
-        </>
-    )
+const ArticleDetailPage: FC<pageProps> = ({ params }) => {
+  return (
+    <> 
+    <Container></Container> 
+      <Container className="site-main-container" size="2">
+        <article>
+          <Box>
+            <Heading
+              className="article-content-title"
+              as="h1"
+              size="8"
+              weight="regular"
+              trim="normal"
+              mb="5"
+            >
+              Hello there
+            </Heading>
+            <Text
+              style={{ color: "#333333" }}
+              className="welcome-message-content"
+              size="2"
+              weight="regular"
+              align="left"
+              as="p"
+            >
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book.
+            </Text>
+          </Box>
+        </article>
+      </Container>
+    </>
+  );
 };
 
 export default ArticleDetailPage;

@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-      <Theme appearance="dark">
+      <Theme>
         <Header/>
         <main className="">
             {children}
