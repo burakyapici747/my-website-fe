@@ -7,7 +7,7 @@ const Navbar = () => {
     return (
         <>
             <nav className="w-full">
-                <Container className="navbar-container" size="3">
+                <Container className="navbar-container" size="3" style={{color: 'rgba(0, 0, 0, 0.55)'}}>
                     <Flex display="flex" direction="row" wrap="wrap" p="2">
                         <Flex className="flex items-center mr-5" display="flex" direction="row" align="center" mr="5">
                             <Heading as="h1">
@@ -20,7 +20,7 @@ const Navbar = () => {
                                                 <path d="M12,0a6,6,0,0,0,0,12A72.0788,72.0788,0,0,1,84,84a6,6,0,0,0,12,0A84.0981,84.0981,0,0,0,12,0Z"/>
                                             </g>
                                         </svg>
-                                        <Text as="p" color="gray" size="5" weight="medium">Burak Yapici's Blog</Text>
+                                        <Text as="p" color="gray" size="3" weight="bold">Burak Yapici's Blog</Text>
                                     </Flex>
                                 </Link>
                             </Heading>
@@ -61,7 +61,7 @@ const Navbar = () => {
                         </Flex>
                     </Flex>
                 </Container>
-                <div className="w-full site-navbar-container flex flex-wrap p-2"></div>
+                <div className="w-full site-navbar-container flex flex-wrap"></div>
             </nav>
         </>
     )

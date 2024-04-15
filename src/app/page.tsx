@@ -7,7 +7,7 @@ function Page() {
             <Box
                 className="welcome-message"
                 py="7"
-                style={{ backgroundColor: 'var(--gray-a2)', borderRadius: 'var(--radius-3)' }}
+                style={{borderRadius: 'var(--radius-3)' }}
                 mb="8"
             >
                 <Container size="2">
@@ -15,6 +15,7 @@ function Page() {
                         Hello there
                     </Heading>
                     <Text
+                        style={{color: '#333333'}}
                         className="welcome-message-content"
                         size="2"
                         weight="regular"
