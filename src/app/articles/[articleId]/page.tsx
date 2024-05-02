@@ -1,5 +1,3 @@
-import { faClock } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Box, Container, Heading, Text } from "@radix-ui/themes";
 import { FC } from "react";
 
@@ -11,7 +9,7 @@ const ArticleDetailPage: FC<pageProps> = ({ params }) => {
   return (
     <> 
     <Container></Container> 
-      <Container className="site-main-container" size="2">
+      <Container className="site-main-container" size="3">
         <article>
           <Box>
             <Heading

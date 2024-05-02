@@ -24,8 +24,8 @@ const BlogPage = () => {
                            <Box className="article-item">
                                <article className="article-archive-item flex flex-col mb-1">
                                    <Link href="/articles/dsadsa"
-                                         className="article-title antialiased text-2xl underline-offset-2 font-bold truncate mb-1 hover:underline"
-                                         style={{fontFamily: 'Georgia serif'}}
+                                         className="article-title antialiased text-2xl underline-offset-2 font-semibold truncate mb-1 hover:underline"
+                                         style={{fontFamily: 'georgiai'}}
                                    >
                                        Java Modül Sisteminin Durumu - Mark Reinhold (Ceviri)
                                    </Link>

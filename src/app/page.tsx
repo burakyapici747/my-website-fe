@@ -1,19 +1,26 @@
 import {Avatar, Box, Container, Flex, Heading, Text} from "@radix-ui/themes";
 import {GitHubLogoIcon, LinkedInLogoIcon} from "@radix-ui/react-icons";
+import {Noto_Sans_Georgian} from "@next/font/google"
+
+const roboto = Noto_Sans_Georgian({
+    subsets: ['latin-ext'],
+    style: "normal",
+    weight: "600"
+});
 
 function Page() {
     return (
         <>
             <Box
-                className="welcome-message"
+                className={`welcome-message`}
                 py="7"
                 style={{borderRadius: 'var(--radius-3)' }}
                 mb="8"
             >
                 <Container size="2">
-                    <Heading className="welcome-message-title" as="h1" size="8" weight="regular" trim="normal" mb="5">
+                    <h1 className={`welcome-message-title font-serif`} style={{fontFamily: "georgia", color: "#333", fontSize: "40px"}}>
                         Hello there
-                    </Heading>
+                    </h1>
                     <Text
                         style={{color: '#333333'}}
                         className="welcome-message-content"
