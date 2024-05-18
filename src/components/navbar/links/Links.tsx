@@ -11,14 +11,6 @@ const Links = () => {
             title: "Categories",
             path: "/categories"
         },
-        {
-            title: "Projects",
-            path: "/projects",
-        },
-        {
-            title: "Contact",
-            path: "/contact",
-        },
     ];
 
     return (
