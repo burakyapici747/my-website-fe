@@ -7,21 +7,17 @@ import {useEffect} from "react";
 import {setArticles} from "@/lib/features/articles/articleSlice";
 import ArticleYearGroup from "@/service/model/ArticleYearGroup";
 import {Article} from "@/service/model/article";
-import {number} from "prop-types";
 
 export const ArticlePreviewWrapper = () => {
     const [loading, data] = useFetch(getAllGroupedAndDecreasedByYear, {});
 
     useEffect(() => {
         if (data){
-            debugger
             setArticles(data as ArticleYearGroup<Article>);
-            debugger
         }
-    }, [data])
+    }, [])
 
     const renderArticles = () => {
-        debugger
         return (
             <>
                 {(!loading) ? (
@@ -32,12 +28,12 @@ export const ArticlePreviewWrapper = () => {
                             </Heading>
                             <Grid className="articles site-margin-bottom" gap="2" columns="1">
                                 {articles.map((article, index) => (
-                                    <Box className="article-item">
+                                    <Box className="article-item" id={index.toString()} key={index}>
                                         <article className="article-archive-item flex flex-col mb-1">
                                             <ArticlePreviewTitle title={article.title}/>
                                             <ArticlePreviewBody
-                                                content={article.description}
-                                                readingTime={article.readTimeInMinute}
+                                                content={article.content}
+                                                readingTime={article.readingTime}
                                             />
                                         </article>
                                     </Box>
@@ -53,7 +49,7 @@ export const ArticlePreviewWrapper = () => {
     };
 
     /*
-    <section className="" id={() ? year.toString() : '#'}>
+                <section className="" id={() ? year.toString() : '#'}>
                     <Heading as="h2" className="article-taxonomy-year" size="6" weight="bold" color="tomato" mb="6">
                         2023
                     </Heading>

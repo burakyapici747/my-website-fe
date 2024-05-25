@@ -2,10 +2,10 @@ export type Article = {
     id: string,
     categoryId: string,
     title: string,
-    description: string,
+    content: string,
     rate: number,
     publishDate: string,
     coverImageURL: string,
-    readTimeInMinute: number,
+    readingTime: number,
     htmlContent: string,
 };

@@ -5,7 +5,6 @@ export default function useFetch<T>(fetchMethod: ({}: any) => Promise<T>, params
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        debugger
         (async () => {
             setLoading(true);
             setData(await fetchMethod(params));
@@ -13,8 +12,7 @@ export default function useFetch<T>(fetchMethod: ({}: any) => Promise<T>, params
                 setLoading(false);
             }, 350);
         })();
-        debugger
-    }, [params]);
+    }, []);
 
     return [loading, data];
 }
