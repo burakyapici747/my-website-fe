@@ -8,12 +8,8 @@ const Links = () => {
             path: "/articles",
         },
         {
-            title: "Projects",
-            path: "/projects",
-        },
-        {
-            title: "Contact",
-            path: "/contact",
+            title: "Categories",
+            path: "/categories"
         },
     ];
 

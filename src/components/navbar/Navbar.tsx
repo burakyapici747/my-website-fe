@@ -6,7 +6,7 @@ import {Container, Flex, Heading, Text, Link, Button, Dialog, TextField} from "@
 const Navbar = () => {
     return (
         <>
-            <nav className="w-full">
+            <nav className="w-full" style={{backgroundColor: 'rgba(251, 250, 248, .4)'}}>
                 <Container className="navbar-container" size="3" style={{color: 'rgba(0, 0, 0, 0.55)'}}>
                     <Flex display="flex" direction="row" wrap="wrap" p="2">
                         <Flex className="flex items-center mr-5" display="flex" direction="row" align="center" mr="5">
@@ -26,39 +26,6 @@ const Navbar = () => {
                             </Heading>
                         </Flex>
                         <Links/>
-                        <Flex display="flex" direction="row" justify="end" align="center" gap="2">
-                            <Dialog.Root>
-                                <Dialog.Trigger>
-                                    <Link weight="bold" color="sky">Login</Link>
-                                </Dialog.Trigger>
-
-                                <Dialog.Content style={{ maxWidth: 450 }}>
-                                    <Dialog.Title size="6" align="center">Login</Dialog.Title>
-                                    <Flex direction="column" gap="3">
-                                        <label>
-                                            <Text as="div" size="2" mb="3" weight="bold">
-                                                Email
-                                            </Text>
-                                            <TextField.Input
-                                                placeholder="Enter your email"
-                                            />
-                                        </label>
-                                    </Flex>
-
-                                    <Flex gap="3" mt="4">
-                                        <Dialog.Close>
-                                            <Button size="2">Save</Button>
-                                        </Dialog.Close>
-                                    </Flex>
-                                    <Flex gap="3" mt="4" justify="center">
-
-                                        Hesabın yok mu?<Link>Kayıt ol</Link>
-                                    </Flex>
-                                </Dialog.Content>
-                            </Dialog.Root>
-
-                            <Link weight="bold" color="sky" href="">Sign up</Link>
-                        </Flex>
                     </Flex>
                 </Container>
                 <div className="w-full site-navbar-container flex flex-wrap"></div>
