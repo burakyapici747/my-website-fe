@@ -1,11 +1,9 @@
 export type Article = {
-    id: string,
-    categoryId: string,
-    title: string,
-    content: string,
+    id:string,
+    title:string,
+    content:string,
+    readingTime:number,
     rate: number,
-    publishDate: string,
-    coverImageURL: string,
-    readingTime: number,
-    htmlContent: string,
+    publishDate:string,
+    createdAt:string,
 };
